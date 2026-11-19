@@ -1,0 +1,44 @@
+/* Shared cart styles — Bhau Korde */
+.tools a.cartbtn{display:flex;gap:6px;align-items:center;color:inherit;font-family:var(--font-head);font-weight:500;text-transform:uppercase;letter-spacing:.06em;font-size:13px;padding:4px}
+.tools a.cartbtn:hover,.tools a.cartbtn.cur{color:var(--accent)}
+.tools a.cartbtn.cur{border-bottom:2px solid var(--accent)}
+.tools a.cartbtn i{font-size:18px}
+.tools a.shopbtn{padding:9px 20px}
+.pc .btn.addc{margin-top:12px}
+.pc .btn.addc+.btn{margin-top:8px;background:transparent;color:var(--fg);border:1px solid var(--line)}
+.pc .btn.addc+.btn:hover{background:#25d366;border-color:#25d366;color:#fff}
+.pc .szsel{margin-top:6px;width:100%;padding:7px 8px;font:inherit;font-size:12px;background:var(--bg);color:var(--fg);border:1px solid var(--line)}
+.toast{pointer-events:none}
+.toast a{color:inherit;text-decoration:underline;pointer-events:auto;margin-left:8px}
+/* cart page */
+.cartpage{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:32px;align-items:start}
+@media(max-width:900px){.cartpage{grid-template-columns:1fr}}
+.citem{display:grid;grid-template-columns:84px minmax(0,1fr) auto;gap:16px;align-items:center;padding:16px 0;border-bottom:1px solid var(--line)}
+.citem:first-child{padding-top:0}
+.citem .ci{width:84px;height:84px;background:var(--soft);display:grid;place-items:center;overflow:hidden;color:var(--muted);font-size:11px;text-align:center}
+.citem .ci img{width:100%;height:100%;object-fit:contain;display:block}
+.citem h4{font-size:16px;font-weight:500}
+.citem .cs{color:var(--muted);font-size:12px}
+.citem .cu{color:var(--accent);font-family:var(--font-head);font-weight:600;margin-top:2px}
+.citem .cr{text-align:right;display:grid;gap:8px;justify-items:end}
+.citem .lt{font-family:var(--font-head);font-weight:600;font-size:17px}
+.qty{display:inline-flex;border:1px solid var(--line);align-items:center}
+.qty button{width:32px;height:32px;background:none;border:0;color:inherit;font-size:16px;cursor:pointer}
+.qty button:hover{background:var(--soft);color:var(--accent)}
+.qty span{min-width:34px;text-align:center;font-weight:500}
+.rm{background:none;border:0;color:var(--muted);cursor:pointer;font:inherit;font-size:12px;padding:0}
+.rm:hover{color:var(--sale)}
+.csum{background:var(--soft);border:1px solid var(--line);padding:24px;position:sticky;top:90px}
+.csum h3{font-size:20px;margin-bottom:14px}
+.csum .row{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-bottom:1px dashed var(--line)}
+.csum .row.tot{font-family:var(--font-head);font-weight:600;font-size:20px;border-bottom:0;padding-top:14px}
+.csum .btn{display:block;width:100%;text-align:center;margin-top:14px}
+.csum small{display:block;color:var(--muted);font-size:12px;margin-top:12px;line-height:1.5}
+.cempty{text-align:center;padding:60px 16px;color:var(--muted)}
+.cempty i{display:block;font-size:56px;color:var(--accent);opacity:.7;margin-bottom:10px}
+.cempty h2{color:var(--fg);margin-bottom:8px}
+.cempty .btn{margin-top:18px}
+.cclear{margin-top:14px;font-size:13px}
+@media(max-width:520px){.citem{grid-template-columns:64px minmax(0,1fr)}.citem .ci{width:64px;height:64px}.citem .cr{grid-column:1/-1;grid-auto-flow:column;justify-content:space-between;align-items:center;justify-items:start}}
+.tools a.cartbtn{white-space:nowrap}
+@media(max-width:560px){.tools a.cartbtn .ctxt{display:none}.tools a.cartbtn{gap:4px}}
